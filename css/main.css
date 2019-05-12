@@ -1983,7 +1983,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #13ffaf;
+  background: #b5ffcf;
 }
 .feed-link,
 .chat {
@@ -3024,4 +3024,11 @@ ul.breadcrumb li+li:last-child {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.posts-expand .post-eof {
+  margin: 80px auto 60px;
+  width: 85%;
+  height: 2.5px;
+  background: #ccc;
+  text-align: center;
 }
