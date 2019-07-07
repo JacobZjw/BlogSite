@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Jacob&#39;s blogs">
 <meta property="og:description" content="数字类型python中数字有四种类型：整数、布尔型、浮点数和复数。  int (整型), 如 1, 只有一种整数类型 int，表示为长整型，没有python2 中的 long。  bool (布尔型), 如True。  float (浮点型), 如 1.23、3E-2  complex (复数型), 如 1 + 2j、 1.1 + 2.2j">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-07T17:06:11.536Z">
+<meta property="og:updated_time" content="2019-07-07T17:25:30.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习笔记（二）——数字类型的运算及其输入与格式化输出">
 <meta name="twitter:description" content="数字类型python中数字有四种类型：整数、布尔型、浮点数和复数。  int (整型), 如 1, 只有一种整数类型 int，表示为长整型，没有python2 中的 long。  bool (布尔型), 如True。  float (浮点型), 如 1.23、3E-2  complex (复数型), 如 1 + 2j、 1.1 + 2.2j">
@@ -438,7 +438,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-08 01:06:11" itemprop="dateModified" datetime="2019-07-08T01:06:11+08:00">2019-07-08</time>
+                <time title="修改时间：2019-07-08 01:25:30" itemprop="dateModified" datetime="2019-07-08T01:25:30+08:00">2019-07-08</time>
               
             
           </span>
@@ -581,11 +581,15 @@
 <h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><table>
 <thead>
 <tr>
-<th>=</th>
-<th><code>c=a+b</code>将<code>a+b</code>运算结果赋值为<code>c</code></th>
+<th>运算符</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>=</td>
+<td><strong>c=a+b将a+b运算结果赋值为<code>c</code></strong></td>
+</tr>
 <tr>
 <td>+=</td>
 <td><strong>c+=a等价于c=c+a</strong></td>
@@ -647,7 +651,8 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">flag1 = <span class="number">3</span> &gt; <span class="number">2</span></span><br><span class="line">flag2 = <span class="number">2</span> &lt; <span class="number">1</span></span><br><span class="line">flag3 = flag1 <span class="keyword">and</span> flag2</span><br><span class="line">flag4 = flag1 <span class="keyword">or</span> flag2</span><br><span class="line">flag5 = <span class="keyword">not</span> flag1</span><br><span class="line">print(<span class="string">"flag1 = "</span>, flag1)</span><br><span class="line">print(<span class="string">"flag2 = "</span>, flag2)</span><br><span class="line">print(<span class="string">"flag3 = "</span>, flag3)</span><br><span class="line">print(<span class="string">"flag4 = "</span>, flag4)</span><br><span class="line">print(<span class="string">"flag5 = "</span>, flag5)</span><br><span class="line">print(flag1 <span class="keyword">is</span> <span class="literal">True</span>)</span><br><span class="line">print(flag2 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
 <p>运算结果：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">flag1 =  <span class="literal">True</span></span><br><span class="line">flag2 =  <span class="literal">False</span></span><br><span class="line">flag3 =  <span class="literal">False</span></span><br><span class="line">flag4 =  <span class="literal">True</span></span><br><span class="line">flag5 =  <span class="literal">False</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure>
-<h2 id="按位运算符"><a href="#按位运算符" class="headerlink" title="按位运算符"></a>按位运算符</h2><table>
+<h2 id="按位运算符"><a href="#按位运算符" class="headerlink" title="按位运算符"></a>按位运算符</h2><p>设变量a=60,b=13;则二进制a表示为：00111100，b表示为：00001101</p>
+<table>
 <thead>
 <tr>
 <th>运算符</th>
@@ -658,35 +663,35 @@
 <tbody>
 <tr>
 <td><code>&amp;</code></td>
-<td>如果它存在于两个操作数中，则操作符复制位到结果中</td>
-<td><code>(a &amp; b)</code> 结果表示为 <code>0000 1100</code></td>
+<td>二进制与。如果它存在于两个操作数中，则操作符复制位到结果中</td>
+<td><code>(a &amp; b)</code> 结果表示为 <code>00001100</code></td>
 </tr>
 <tr>
 <td>`</td>
 <td>`</td>
-<td>如果它存在于任一操作数，则复制位。</td>
+<td>二进制或，如果它存在于任一操作数，则复制位。</td>
 <td>`(a</td>
-<td>b) = 61<code>结果表示为</code>0011 1101`</td>
+<td>b)=61<code>结果表示为</code>00111101`</td>
 </tr>
 <tr>
 <td><code>^</code></td>
-<td>二进制异或。如果它是一个操作数集合，但不是同时是两个操作数则将复制位。</td>
-<td><code>(a ^ b) = 49</code> 结果表示为 <code>0011 0001</code></td>
+<td>二进制异或，如果它是一个操作数集合，但不是同时是两个操作数则将复制位。</td>
+<td><code>(a ^ b) = 49</code> 结果表示为 <code>00110001</code></td>
 </tr>
 <tr>
 <td><code>~</code></td>
 <td>二进制补码，它是一元的，具有“翻转”的效果。</td>
-<td><code>(~a ) = -61</code>有符号的二进制数，表示为<code>1100 0011</code>的补码形式</td>
+<td><code>(~a ) = -61</code>有符号的二进制数，表示为<code>11000011</code>的补码形式</td>
 </tr>
 <tr>
 <td><code>&lt;&lt;</code></td>
 <td>二进制左移，左操作数的值由右操作数指定的位数左移。</td>
-<td><code>a &lt;&lt; 2 = 240</code> 结果表示为 <code>1111 0000</code></td>
+<td><code>a &lt;&lt; 2 = 240</code> 结果表示为 <code>11110000</code></td>
 </tr>
 <tr>
 <td><code>&gt;&gt;</code></td>
 <td>二进制右移，左操作数的值由右操作数指定的位数右移。</td>
-<td><code>a &gt;&gt; 2 = 15</code>结果表示为<code>0000 1111</code></td>
+<td><code>a &gt;&gt; 2 = 15</code>结果表示为<code>00001111</code></td>
 </tr>
 </tbody>
 </table>
