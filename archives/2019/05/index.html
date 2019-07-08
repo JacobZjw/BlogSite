@@ -98,6 +98,14 @@
 
 
 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/live2d/css/live2d.css">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Jacob&#39;s blogs">
 <meta property="og:url" content="https://www.jbblogs.cn/archives/2019/05/index.html">
@@ -579,7 +587,7 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://ccblogs.top" title="http://ccblogs.top" rel="noopener" target="_blank">这里有一位帅哥</a>
+                    <a href="https://ccblogs.top/" title="https://ccblogs.top/" rel="noopener" target="_blank">这里有一位帅哥</a>
                   </li>
                 
               </ul>
@@ -649,6 +657,27 @@
 
 
 
+
+
+
+<!-- 血小板 -->
+  <div id="landlord">
+      <div class="message" style="opacity:0"></div>
+      <canvas id="live2d" width="560" height="500" class="live2d"></canvas>
+      <div class="hide-button">隐藏</div>
+  </div>
+
+  <!-- live2d 血小板 -->
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+    var message_Path = '/live2d/'
+    var home_Path = 'https://haremu.com/'
+</script>
+<script type="text/javascript" src="/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="/live2d/js/message.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "/live2d/model/xiaoban/model.json");
+</script>
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -1267,5 +1296,5 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/kesyoban.model.json"},"display":{"position":"right","width":300,"height":600,"hOffset":0,"vOffset":-20},"mobile":{"show":false},"log":false});</script></body>
+</body>
 </html>
