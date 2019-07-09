@@ -1,12 +1,16 @@
 function renderTip(template, context) {
     var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
+
     return template.replace(tokenReg, function (word, slash1, token, slash2) {
         if (slash1 || slash2) {
             return word.replace('\\', '');
         }
+
+
         var variables = token.replace(/\s/g, '').split('.');
         var currentObject = context;
         var i, length, variable;
+
         for (i = 0, length = variables.length; i < length; ++i) {
             variable = variables[i];
             currentObject = currentObject[variable];
@@ -38,7 +42,8 @@ function initTips(){
         dataType: "json",
         success: function (result){
             $.each(result.mouseover, function (index, tips){
-                $(tips.selector).mouseover(function (){
+                $(document).on("mouseover", tips.selector, function () {
+                //$(tips.selector).mouseover(function (){
                     var text = tips.text;
                     if(Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1)-1];
                     text = text.renderTip({text: $(this).text()});
@@ -46,12 +51,26 @@ function initTips(){
                 });
             });
             $.each(result.click, function (index, tips){
-                $(tips.selector).click(function (){
+                $(document).on("click", tips.selector, function () {
+                //$(tips.selector).click(function (){
                     var text = tips.text;
                     if(Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1)-1];
                     text = text.renderTip({text: $(this).text()});
                     showMessage(text, 3000);
                 });
+            });
+            $.each(result.seasons, function (index, tips) {
+                var now = new Date();
+                var after = tips.date.split('-')[0];
+                var before = tips.date.split('-')[1] || after;
+
+                if ((after.split('/')[0] <= now.getMonth() + 1 && now.getMonth() + 1 <= before.split('/')[0]) &&
+                    (after.split('/')[1] <= now.getDate() && now.getDate() <= before.split('/')[1])) {
+                    var text = tips.text;
+                    if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+                    text = text.render({year: now.getFullYear()});
+                    showMessage(text, 6000, true);
+                }
             });
         }
     });
@@ -60,9 +79,15 @@ initTips();
 
 (function (){
     var text;
+    var referrer = document.createElement('a');
     if(document.referrer !== ''){
+        referrer.href = document.referrer;
+    }
+
+    if(referrer.href !== '' && referrer.hostname != 'www.jbblogs.cn'){
         var referrer = document.createElement('a');
         referrer.href = document.referrer;
+
         text = '嗨！来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友！';
         var domain = referrer.hostname.split('.')[1];
         if (domain == 'baidu') {
@@ -73,7 +98,7 @@ initTips();
             text = '嗨！ 来自 谷歌搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
         }
     }else {
-        if (window.location.href == `${home_Path}`) { //主页URL判断，需要斜杠结尾
+        if (window.location.href == 'https://www.jbblogs.cn/') { //主页URL判断，需要斜杠结尾
             var now = (new Date()).getHours();
             if (now > 23 || now <= 5) {
                 text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？';
@@ -101,7 +126,8 @@ initTips();
     showMessage(text, 12000);
 })();
 
-window.setInterval(showHitokoto,30000);
+//window.setInterval(showHitokoto,30000);
+window.hitokotoTimer = window.setInterval(showHitokoto,30000);
 
 function showHitokoto(){
     $.getJSON('https://v1.hitokoto.cn/',function(result){

@@ -103,14 +103,19 @@
 
 
 
+<!---------------------------------------------------------------------------------------------------------------------->
+<!-- live2d 血小板 -->
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+    var message_Path = '/live2d/'
+    var home_Path = 'www.jbblogs.cn'
+</script>
+<script type="text/javascript" src="/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="/live2d/js/message.js"></script>
 
-<!-- 血小板 -->
+<link rel="stylesheet" href="/live2d/css/live2d.css">
+<!---------------------------------------------------------------------------------------------------------------------->
 
-<div id="landlord">
-      <div class="message" style="opacity:0"></div>
-      <canvas id="live2d" width="560" height="500" class="live2d"></canvas>
-      <div class="hide-button">隐藏</div>
-  </div>
   <meta property="og:type" content="website">
 <meta property="og:title" content="Jacob&#39;s blogs">
 <meta property="og:url" content="https://www.jbblogs.cn/tags/学习笔记/index.html">
@@ -696,16 +701,20 @@
 
 
 
+
+<!------------------------------------------------------------------------------->
 <!-- 血小板 -->
-<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript" src="/live2d/js/live2d.js"></script>
-<script type="text/javascript" src="/live2d/js/message.js"></script>
+  <div id="landlord">
+      <div class="message" style="opacity:0"></div>
+      <canvas id="live2d" width="560" height="500" class="live2d"></canvas>
+      <div class="hide-button">隐藏</div>
+  </div>
+
 <script type="text/javascript">
-    loadlive2d("live2d", "/live2d/model/xiaoban/model.json");
+  loadlive2d("live2d", "/live2d/model/xiaoban/model.json");
 </script>
 
-<link rel="stylesheet" href="/live2d/css/live2d.css"> 
-
+<!------------------------------------------------------------------------------->
 
         
 <div class="busuanzi-count">
