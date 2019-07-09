@@ -105,7 +105,12 @@
 
 
 <!-- 血小板 -->
-<link rel="stylesheet" href="/live2d/css/live2d.css">
+
+<div id="landlord">
+      <div class="message" style="opacity:0"></div>
+      <canvas id="live2d" width="560" height="500" class="live2d"></canvas>
+      <div class="hide-button">隐藏</div>
+  </div>
   <meta name="description" content="一、变量和简单数据类型Ⅰ、变量的命名和使用命名变量时应遵守以下规则： 1、变量名只能包含字母、数字和下划线，第一个字符必须是字母或下划线，不能以数字开头。 2、变量名不能包含空格。 3、不能使用Python的保留字（即关键字）。Python 的标准库提供了一个 keyword 模块，可以输出当前版本的所有关键字： 123&amp;gt;&amp;gt;&amp;gt; import keyword&amp;gt;&amp;gt;&amp;gt;">
 <meta name="keywords" content="Python,学习笔记">
 <meta property="og:type" content="website">
@@ -681,23 +686,16 @@
 
 
 <!-- 血小板 -->
-  <div id="landlord">
-      <div class="message" style="opacity:0"></div>
-      <canvas id="live2d" width="560" height="500" class="live2d"></canvas>
-      <div class="hide-button">隐藏</div>
-  </div>
-
-  <!-- live2d 血小板 -->
 <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript">
-    var message_Path = '/live2d/'
-    var home_Path = 'https://haremu.com/'
-</script>
 <script type="text/javascript" src="/live2d/js/live2d.js"></script>
 <script type="text/javascript" src="/live2d/js/message.js"></script>
 <script type="text/javascript">
     loadlive2d("live2d", "/live2d/model/xiaoban/model.json");
 </script>
+
+<link rel="stylesheet" href="/live2d/css/live2d.css"> 
+
+
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

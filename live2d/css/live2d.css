@@ -19,6 +19,11 @@
     height: 250px;
 }
 
+.live2d:hover {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
 .message {
     opacity: 0;
     width: 250px;

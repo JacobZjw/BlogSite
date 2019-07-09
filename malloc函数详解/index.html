@@ -105,7 +105,12 @@
 
 
 <!-- 血小板 -->
-<link rel="stylesheet" href="/live2d/css/live2d.css">
+
+<div id="landlord">
+      <div class="message" style="opacity:0"></div>
+      <canvas id="live2d" width="560" height="500" class="live2d"></canvas>
+      <div class="hide-button">隐藏</div>
+  </div>
   <meta name="description" content="函数定义及原理函数定义123extern void *malloc(unsigned int num_bytes);//函数原型#include&amp;lt;stdlib.h&amp;gt;//头文件void *malloc(size_t size);//函数声明 原理malloc函数接收一个参数：所需的内存字节数。malloc会根据这个参数找到合适的空闲内存块，然后返回动态内存块的首字节地址。这个内存块是匿名">
 <meta name="keywords" content="学习笔记,C语言">
 <meta property="og:type" content="article">
@@ -938,23 +943,16 @@
 
 
 <!-- 血小板 -->
-  <div id="landlord">
-      <div class="message" style="opacity:0"></div>
-      <canvas id="live2d" width="560" height="500" class="live2d"></canvas>
-      <div class="hide-button">隐藏</div>
-  </div>
-
-  <!-- live2d 血小板 -->
 <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript">
-    var message_Path = '/live2d/'
-    var home_Path = 'https://haremu.com/'
-</script>
 <script type="text/javascript" src="/live2d/js/live2d.js"></script>
 <script type="text/javascript" src="/live2d/js/message.js"></script>
 <script type="text/javascript">
     loadlive2d("live2d", "/live2d/model/xiaoban/model.json");
 </script>
+
+<link rel="stylesheet" href="/live2d/css/live2d.css"> 
+
+
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
