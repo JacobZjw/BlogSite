@@ -1,0 +1,6 @@
+https://www.jbblogs.cn/Python学习笔记（二）——数字类型的运算及其输入与格式化输出/
+https://www.jbblogs.cn/Python学习笔记（一）——学习资源及参考资料/
+https://www.jbblogs.cn/VS-Code配置C++/
+https://www.jbblogs.cn/malloc函数详解/
+https://www.jbblogs.cn/Pop Sequence/
+https://www.jbblogs.cn/String-Task/
