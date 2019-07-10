@@ -425,7 +425,8 @@
       <div class="post-body">
         
         
-          <div class="tag-cloud">
+        
+          <!--<div class="tag-cloud">
             <div class="tag-cloud-title">
               
               
@@ -472,7 +473,74 @@
                 <a href="/tags/C语言/" style="font-size: 12px; color: #ccc">C语言</a> <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/Python/" style="font-size: 21px; color: #6f6f6f">Python</a> <a href="/tags/VS-Code/" style="font-size: 12px; color: #ccc">VS Code</a> <a href="/tags/习题/" style="font-size: 21px; color: #6f6f6f">习题</a> <a href="/tags/学习笔记/" style="font-size: 30px; color: #111">学习笔记</a> <a href="/tags/学习资源/" style="font-size: 12px; color: #ccc">学习资源</a> <a href="/tags/教程/" style="font-size: 12px; color: #ccc">教程</a> <a href="/tags/数据结构/" style="font-size: 12px; color: #ccc">数据结构</a>
               
             </div>
-          </div>
+          </div>-->
+
+           <div class="tag-cloud">
+  <!-- <div class="tag-cloud-title">
+      目前共计 9 个标签
+  </div> -->
+  <div class="tag-cloud-tags" id="tags">
+    <a href="/tags/C语言/" style="font-size: 16px; color: #fff">C语言</a> <a href="/tags/Hexo/" style="font-size: 16px; color: #fff">Hexo</a> <a href="/tags/Python/" style="font-size: 16px; color: #fff">Python</a> <a href="/tags/VS-Code/" style="font-size: 16px; color: #fff">VS Code</a> <a href="/tags/习题/" style="font-size: 16px; color: #fff">习题</a> <a href="/tags/学习笔记/" style="font-size: 16px; color: #fff">学习笔记</a> <a href="/tags/学习资源/" style="font-size: 16px; color: #fff">学习资源</a> <a href="/tags/教程/" style="font-size: 16px; color: #fff">教程</a> <a href="/tags/数据结构/" style="font-size: 16px; color: #fff">数据结构</a>
+  </div>
+</div>
+<br>
+<!--这部分是3D标签云
+        
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+            <div id="myCanvasContainer" class="widget tagcloud">
+                <canvas width="850" height="250"  id="resCanvas" style="width=100%">
+                    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C语言/">C语言</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/">VS Code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/习题/">习题</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习笔记/">学习笔记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教程/">教程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">1</span></li></ul>
+                </canvas>
+            </div>
+        </div>
+      
+-->
+<script type="text/javascript">
+   var alltags=document.getElementById('tags');
+   var tags=alltags.getElementsByTagName('a');
+
+   for (var i = tags.length - 1; i >= 0; i--) {
+     var r=Math.floor(Math.random()*75+130);
+     var g=Math.floor(Math.random()*75+100);
+     var b=Math.floor(Math.random()*75+80);
+     tags[i].style.background = "rgb("+r+","+g+","+b+")";
+   }
+</script>
+
+<style type="text/css">
+    div#posts.posts-expand .tag-cloud a{
+   background-color: #f5f7f1;
+   border-radius: 6px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-top: 18px;
+
+ }
+
+ .tag-cloud a{
+   background-color: #f5f7f1;
+   border-radius: 4px;
+   padding-right: 5px;
+   padding-left: 5px;
+   margin-right: 5px;
+   margin-left: 0px;
+   margin-top: 8px;
+   margin-bottom: 0px;
+
+ }
+
+ .tag-cloud a:before{
+      content: "📜";
+ }
+
+ .tag-cloud-tags{
+   text-align: left;
+   counter-reset: tags;
+ }
+</style>
+
         
       </div>
       
@@ -651,6 +719,19 @@
       
 
     </div>
+<!--3D标签云
+
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+            <div id="myCanvasContainer" class="widget tagcloud">
+                <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C语言/">C语言</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/">VS Code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/习题/">习题</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习笔记/">学习笔记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教程/">教程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">1</span></li></ul>
+                </canvas>
+            </div>
+        </div>
+      
+-->
   </aside>
   
 

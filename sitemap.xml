@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.jbblogs.cn/about/index.html</loc>
+    
+    <lastmod>2019-07-10T13:00:43.988Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jbblogs.cn/%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDHexo%E6%BA%90%E6%96%87%E4%BB%B6/</loc>
     
-    <lastmod>2019-07-10T09:03:49.729Z</lastmod>
+    <lastmod>2019-07-10T09:06:36.515Z</lastmod>
     
   </url>
   
@@ -61,13 +68,6 @@
     <loc>https://www.jbblogs.cn/malloc%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</loc>
     
     <lastmod>2019-04-10T07:54:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jbblogs.cn/about/index.html</loc>
-    
-    <lastmod>2019-04-03T10:16:40.000Z</lastmod>
     
   </url>
   
