@@ -107,7 +107,7 @@
 
 @media (max-width: 860px) {
     #landlord {
-        /* display: none; */
+    display: none; 
         
     }
     #live2d{
