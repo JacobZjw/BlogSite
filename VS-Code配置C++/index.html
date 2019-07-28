@@ -112,7 +112,6 @@
 </script>
 <script type="text/javascript" src="/live2d/js/live2d.js"></script>
 <script type="text/javascript" src="/live2d/js/message.js"></script>
-<link rel="stylesheet" href="/live2d/css/live2d.css">
 <!---------------------------------------------------------------------------------------------------------------------->
 
   <meta name="description" content="在开始安装之前，请先确认你满足以下几个条件。1、首先，你有一台电脑，并且已经连接到网络。（受你当前网速的影响，安装过程可能会花费10几分钟或1个小时以上的时间。）2、其次，你的电脑硬盘有500MB的剩余空间。">
@@ -1092,13 +1091,15 @@
 <!-- 血小板 -->
   <div id="landlord">
       <div class="message" style="opacity:0"></div>
-      <canvas id="live2d" width="560" height="500" class="live2d"></canvas>
+      <canvas id="live2d" width="560" height="500" class="#live2d"></canvas>
       <div class="hide-button">隐藏</div>
   </div>
 
 <script type="text/javascript">
   loadlive2d("live2d", "/live2d/model/xiaoban/model.json");
 </script>
+<link rel="stylesheet" href="/live2d/css/live2d.css">
+
 
 <!------------------------------------------------------------------------------->
 

@@ -13,6 +13,8 @@
 #live2d {
     position: relative;
     cursor:grab;
+    width: 280px;
+    height: 250px;
 }
 .live2d{
     width: 280px;

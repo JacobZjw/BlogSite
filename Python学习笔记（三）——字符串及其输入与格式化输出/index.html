@@ -112,7 +112,6 @@
 </script>
 <script type="text/javascript" src="/live2d/js/live2d.js"></script>
 <script type="text/javascript" src="/live2d/js/message.js"></script>
-<link rel="stylesheet" href="/live2d/css/live2d.css">
 <!---------------------------------------------------------------------------------------------------------------------->
 
   <meta name="description" content="字符串简述字符串是Python中最常用的数据类型。在Python中，用引号括起来的都是字符串，其中引号可以是单引号，也可以是双引号。创建字符串很简单，只需要为变量分配一个值即可，例如： 12str1 = &apos;Hello world !&apos;str2 = &quot;Welcome to Jacob&apos;s Blogs !&quot; 在Python中可以根据实际情况选择使用单引号或者双引号。例如当我们想在字符串中包含引号或撇号">
@@ -1331,13 +1330,15 @@
 <!-- 血小板 -->
   <div id="landlord">
       <div class="message" style="opacity:0"></div>
-      <canvas id="live2d" width="560" height="500" class="live2d"></canvas>
+      <canvas id="live2d" width="560" height="500" class="#live2d"></canvas>
       <div class="hide-button">隐藏</div>
   </div>
 
 <script type="text/javascript">
   loadlive2d("live2d", "/live2d/model/xiaoban/model.json");
 </script>
+<link rel="stylesheet" href="/live2d/css/live2d.css">
+
 
 <!------------------------------------------------------------------------------->
 
